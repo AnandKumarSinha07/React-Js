@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous code</title>
+</head>
+<body style="background-color: #212121;">
+    <h2>Chai aur JAVASCRIPT </h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+
+
+<script>
+
+
+const name=function(str){
+    console.log(str);
+}
+//const remove=setInterval(name,1000,"Anand");
+// clearInterval(remove);
+
+document.querySelector('#start').addEventListener('click',function(){
+    const name=function(str){
+      console.log('ranu',new Date())
+    };
+    const intervalId=setInterval(name,1000);
+     console.log(intervalId);
+
+
+document.querySelector('#stop').addEventListener('click',function(){
+   
+       clearInterval(intervalId);
+       console.log('Interval Stopped')
+});
+
+
+});
+
+
+
+</script>
+</html>

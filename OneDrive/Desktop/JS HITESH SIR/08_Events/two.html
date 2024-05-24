@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous code</title>
+</head>
+<body style="background-color: #212121;">
+    <h2>Chai aur code</h2>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const name=()=>{
+        console.log("Anand Kumar sinha")
+    }
+
+    //setTimeout(name,3000);
+    //AFTER 3 SECOND NAME FUNCTION WILL GET CALLED AND IT WILL PRINT CONSOLE PART
+
+    
+    const ChangeText=()=>{
+         document.querySelector('h2').innerText=' chai aur nasta';       
+    }
+    const Timeout=setTimeout(ChangeText,4000);
+    //HERE WE ARE CHANGIN H2 TEXT AND DISPLAY IT AFTER 4S
+
+
+    //TO STOP Timeout we are applying addeventlistner On button and giving reference to the cleartimeout method
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(Timeout);
+        console.log("Stopped")
+    })
+   
+</script>
+</html>

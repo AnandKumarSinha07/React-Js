@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | Dom</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <ul class="Resturant">
+        <li>Chawal</li>
+    </ul>
+</body>
+
+<script>
+    
+    function addLanguage(langName){
+      const newLi=document.createElement('li');
+      newLi.innerHTML=`${langName}`;
+      const selectUl=document.querySelector('.language');
+      selectUl.appendChild(newLi);
+    }
+console.log(addLanguage("Python"));
+console.log(addLanguage("Java"));
+
+function Optimize(langName){
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+}
+console.log(Optimize("Mongo-db"));
+
+ //TO EDIT
+ const secondLang=document.querySelector("li:nth-child(2)");
+ console.log(secondLang)
+ const newLi=document.querySelector('li:nth-child(4)');
+ console.log(newLi)
+ newLi.textContent="mojoBella";
+ 
+    
+
+const firstLang=document.querySelector("li:first-child");
+firstLang.outerHTML="<h3>Anand</h3>";
+
+
+// //remove
+// const remove=document.querySelector("li:last-child")
+// remove.remove();
+
+
+// // Second function
+// function addFood(food){
+//     const second_food=document.createElement("li");
+//     second_food.innerText=`${food}`;
+//     const ul=document.querySelector(".Resturant");
+//     ul.appendChild(second_food);
+// }
+// console.log(addFood("RotiSabji"));
+
+
+// const addFoodoptimized=(food)=>{
+//     const thirdLi=document.createElement("li");
+//     thirdLi.appendChild(document.createTextNode(food));
+//     document.querySelector(".Resturant").appendChild(thirdLi)
+// }
+// addFoodoptimized("SAMOSA")
+
+// //EDIT
+
+//  const thirdFood=document.querySelector("li:nth-child(1)")
+//  const newFood=document.createElement("li");
+//  newFood.textContent="Burger";
+//  thirdFood.replaceWith(newFood);
+
+    
+
+</script>
+</html>
