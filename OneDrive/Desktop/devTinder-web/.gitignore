@@ -26,3 +26,16 @@ Thumbs.db
 
 # Dependency directories for various package managers
 *.local
+
+# Additional directories to ignore
+.npm-cache/
+.cache/
+.expo/
+.android/
+.ssh/
+
+# System config files
+.gitconfig
+
+# Other common files
+*.log
